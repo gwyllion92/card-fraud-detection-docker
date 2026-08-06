@@ -12,6 +12,7 @@ __pycache__/
 
 # Datos procesados o pesados
 data/*.parquet
+data/*.csv
 
 # Ajustes de IDE
 .vscode/
