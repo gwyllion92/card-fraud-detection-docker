@@ -1,0 +1,7 @@
+#Carpetas a ignorar
+.git
+.gitignore
+.venv
+venv
+__pycache__
+.ipynb_checkpoints
