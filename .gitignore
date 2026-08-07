@@ -1,19 +1,19 @@
-# Entornos virtuales
+# Virtual environments
 .venv/
 venv/
 env/
 
-# Temporales de Python y Jupyter
+# Python and Jupyter temporary files
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 *.egg-info/
 .eggs/
 
-# Datos procesados o pesados
+# Processed or large data files
 data/*.parquet
 data/*.csv
 
-# Ajustes de IDE
+# IDE settings
 .vscode/
 .idea/

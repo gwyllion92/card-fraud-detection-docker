@@ -1,4 +1,4 @@
-#Carpetas a ignorar
+# Folders to ignore
 .git
 .gitignore
 .venv
