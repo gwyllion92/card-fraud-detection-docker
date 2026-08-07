@@ -42,7 +42,7 @@ docker build --no-cache -t fraud-detection-app .
 
 2. Run the Container
 ```bash
-docker run -p 8888:8888 fraud-detection-app
+docker run -p 8888:8888 -e JUPYTER_TOKEN="your_password_here" fraud-detection-app
 ```
 
 3. Open JupyterLab
