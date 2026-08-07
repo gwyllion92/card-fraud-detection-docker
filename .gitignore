@@ -1,7 +1,6 @@
 # Virtual environments
 .venv/
 venv/
-env/
 
 # Python and Jupyter temporary files
 __pycache__/
