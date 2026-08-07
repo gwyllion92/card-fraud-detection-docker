@@ -17,5 +17,5 @@ COPY . /app/
 # Declare the port exposed by the container.
 EXPOSE 8888
 
-# CMD executes Jupyter Lab when the container starts
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--ServerApp.token="]
+# Use shell execution (sh -c) so environment variables ($JUPYTER_TOKEN) are dynamically expanded at runtime, avoiding exposed hardcoded passwords in GitHub
+CMD ["sh", "-c", "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --IdentityProvider.token=$JUPYTER_TOKEN"]
