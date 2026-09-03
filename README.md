@@ -1,49 +1,47 @@
-## Credit Card Fraud Detection Pipeline 🚀
-An end-to-end Machine Learning project designed to detect fraudulent credit card transactions using advanced feature engineering, exploratory data analysis, and predictive modeling.
+Pipeline de Detección de Fraude en Tarjetas de Crédito 🚀
+Un proyecto integral de Machine Learning diseñado para detectar transacciones fraudulentas con tarjetas de crédito mediante ingeniería de características avanzada, análisis exploratorio de datos y modelado predictivo.
 
-The repository is structured as a modular Python package (src) and fully containerized with Docker to ensure reproducibility and seamless execution via JupyterLab.
+El repositorio está estructurado como un paquete modular de Python (src) y completamente contenedorizado con Docker para garantizar la reproducibilidad y ejecución fluida mediante JupyterLab.
 
-## 🛠️ Tech Stack & Requirements
-Language: Python 3.13
+🛠️ Tecnologías y Requisitos
+Lenguaje: Python 3.13
 
-Containerization: Docker
+Contenedores: Docker
 
-Libraries: Pandas, NumPy, Scikit-Learn, XGBoost, Matplotlib, Seaborn
+Librerías principales: Pandas, NumPy, Scikit-Learn, XGBoost, Matplotlib, Seaborn
 
-Environment: JupyterLab with modular src package setup (pyproject.toml)
+Entorno: JupyterLab con instalación modular del paquete local src (pyproject.toml)
 
-📁 Repository Structure
-```text
-├── data/                   # Dataset directory (see download instructions below)
-├── notebooks/              # Jupyter notebooks for EDA, feature engineering & modeling
-├── src/                    # Custom Python package with helper utilities
+Visualización: Power BI
+
+📁 Estructura del Repositorio
+Plaintext
+├── dashboards/             # Archivo .pbix de Power BI y captura de vista previa (preview.png)
+├── data/                   # Directorio de datos (ver instrucciones de descarga abajo)
+├── notebooks/              # Cuadernos Jupyter (EDA, Feature Engineering, Modelado y Detección de Anomalías)
+├── src/                    # Paquete personalizado de Python con funciones auxiliares
 │   ├── __init__.py
 │   └── utils.py
-├── .dockerignore           # Docker ignore rules
-├── .gitignore              # Git ignore rules
-├── Dockerfile              # Docker configuration for containerized environment
-├── pyproject.toml          # Package configuration for editable installation
-└── requirements.txt        # Project dependencies
-```
+├── .dockerignore           # Reglas de exclusión para Docker
+├── .gitignore              # Reglas de exclusión para Git
+├── Dockerfile              # Configuración de Docker para el entorno contenedorizado
+├── pyproject.toml          # Configuración del paquete para instalación editable (pip install -e .)
+└── requirements.txt        # Dependencias del proyecto
+📊 Acceso al Dataset
+Debido a los límites de tamaño de archivo en GitHub, los archivos de datos se encuentran excluidos del control de versiones.
 
-## 📊 Dataset Access
-Due to GitHub file size limits, dataset files are excluded from version control.
+Descargá fraudTrain.csv y fraudTest.csv desde el dataset Credit Card Fraud Detection en Kaggle.
 
-1. Download `fraudTrain.csv` and `fraudTest.csv` from the [Credit Card Fraud Detection Dataset on Kaggle](https://www.kaggle.com/datasets/kartik2112/fraud-detection).
-2. Place both `.csv` files inside the `data/` directory before building the Docker image or running local scripts.
+Ubicá ambos archivos .csv dentro de la carpeta data/ antes de construir la imagen de Docker o ejecutar scripts locales.
 
-Place both .csv files inside the data/ directory before building the Docker image or running local scripts.
+🐳 Inicio Rápido con Docker
+Construir la imagen de Docker:
 
-## 🐳 Quickstart with Docker
-1. Build the Docker Image
-```bash
+Bash
 docker build --no-cache -t fraud-detection-app .
-```
+Ejecutar el contenedor:
 
-2. Run the Container
-```bash
-docker run -p 8888:8888 -e JUPYTER_TOKEN="your_password_here" fraud-detection-app
-```
-
-3. Open JupyterLab
-Navigate to http://localhost:8888 in your web browser to interact with the notebooks and project environment.
+Bash
+docker run -p 8888:8888 -e JUPYTER_TOKEN="tu_contraseña_aqui" fraud-detection-app
+Abrir JupyterLab:
+Navegá a http://localhost:8888 en tu navegador web para interactuar con los cuadernos y el entorno del proyecto.

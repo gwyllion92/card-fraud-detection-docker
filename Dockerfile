@@ -1,7 +1,7 @@
-# The project uses Python 3.13. The slim image is a lightweight version.
+# El proyecto utiliza Python 3.13. La imagen slim es una versión ligera y optimizada.
 FROM python:3.13-slim
 
-# Create the /app directory and set it as the working directory
+# Crear el directorio /app y establecerlo como el directorio de trabajo
 WORKDIR /app
 
 # Copiar el código y los archivos de configuración necesarios para pip
@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar el resto del proyecto (notebooks, data, etc.)
 COPY . /app/
 
-# Declare the port exposed by the container.
+# Declarar el puerto expuesto por el contenedor
 EXPOSE 8888
 
-# Use shell execution (sh -c) so environment variables ($JUPYTER_TOKEN) are dynamically expanded at runtime, avoiding exposed hardcoded passwords in GitHub
+# Usar ejecución mediante shell (sh -c) para expandir dinámicamente variables de entorno ($JUPYTER_TOKEN) en tiempo de ejecución, evitando exponer contraseñas estáticas en GitHub
 CMD ["sh", "-c", "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --IdentityProvider.token=$JUPYTER_TOKEN"]
