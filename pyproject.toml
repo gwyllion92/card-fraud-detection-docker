@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "src"
 version = "0.1.0"
 description = "Fraud Detection Source Package"
-authors = [{ name = "gwyllion9" }]
+authors = [{ name = "gwyllion92" }]
 dependencies = []
 
 [tool.setuptools.packages.find]
