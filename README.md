@@ -1,4 +1,4 @@
-# Pipeline de Detección de Fraude en Tarjetas de Crédito 🚀
+# Pipeline de Detección de Fraude en Tarjetas de Crédito 💳
 
 Proyecto integral de Machine Learning diseñado para detectar transacciones fraudulentas con tarjetas de crédito mediante ingeniería de características avanzada, análisis exploratorio de datos y modelado predictivo.
 
